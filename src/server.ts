@@ -1,8 +1,12 @@
-import app from './app';
+import App from './app';
+import TaskController from './task/task.controller';
+import UserController from './user/user.controller';
 
-const port = 3000;
+const app = new App(
+  [
+    new UserController(),
+    new TaskController(),
+  ],
+);
 
-app.listen(port, () => {
-  // tslint:disable-next-line:no-console
-  console.log(`Now listening on port ${port}`);
-});
+app.listen();
