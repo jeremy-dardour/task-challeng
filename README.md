@@ -1,7 +1,8 @@
 # Install:
 
 - `npm install`
-- add given .env file at the root of the project
+- paste given `env` file at the root of the project
+- rename `env` to `.env`: `mv env .env`
 
 # Start
 
