@@ -42,7 +42,7 @@ class App {
   }
 
   private connectToTheDatabase() {
-    mongoose.connect(process.env.MONGODB_URL as string, {
+    mongoose.connect(process.env.MONGO_URL as string, {
       useCreateIndex: true,
       useNewUrlParser: true,
     });

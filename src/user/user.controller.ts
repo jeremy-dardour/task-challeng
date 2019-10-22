@@ -32,7 +32,7 @@ class UserController implements Controller {
     if (!user || user.password !== loginData.password) {
       next(new InvalidCredentialsException());
     } else {
-      const token = await user.generateAuthToken();
+      const token = await user.generateAuthTokenAndSave();
 
       response.send({ email: user.email, token });
     }

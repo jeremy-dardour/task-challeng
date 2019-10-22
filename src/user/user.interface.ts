@@ -4,7 +4,7 @@ interface User {
   email: string;
   password: string;
   tokens: string[];
-  generateAuthToken: () => Promise<string>;
+  generateAuthTokenAndSave: () => Promise<string>;
 }
 
 export default User;
